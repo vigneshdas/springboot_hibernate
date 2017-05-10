@@ -1,0 +1,14 @@
+How To run Spring boot application??
+
+1)Run Application.java class : it has been annotated with @springbootapplication so every thing will be taken care by it
+like.. Component scanning startup configuration etc
+
+2)Problem faced ***********
+By defaul spring boot will auto scan the package were @springbootapplication annotated class is present
+i.e for example com.vignesh has application.java class 
+so spring boot will auto scan all the packages starting from com.vignesh
+Any package starting from different name will not be scanned
+
+3) In web.xml we configure dispatcher servlet and the we provide url pattern
+spring boot default uses "/" patern if we want to overide it then we need to configure mapping externally
+See "DispatcherServletConfig.java" class for detail
